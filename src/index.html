@@ -1,27 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+        
+        <title>Festival</title>
+    </head>
+    <body>
+
+    <!-- example 2 - using auto margins https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-or-right-aligned-items -->
+    <div id="posterPage">
+
+        <header class="container">
+            <nav class="navbar navbar-expand-sm navbar-light flex-sm-nowrap flex-wrap">
+                <div class="container-fluid">
+                    <button class="navbar-toggler flex-grow-sm-1 flex-grow-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <span class="navbar-brand flex-grow-1">
+                        <a class="nav-link" href="index.html">
+                            <img src="./assets/images/logo.png" class="d-inline-block align-top logo" alt="Logo">
+                        </a>
+                    </span>
+                    <div id="collapseNavbar" class="navbar-collapse collapse flex-grow-1 justify-content-center">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item me-5">
+                                <a class="nav-link" href="bandas.html">Bandas</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link" href="nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link" href="galeria.html">Galería</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+        </header>
+
+        <main >
+            <div class="container">
+                <div class="grid">
+                    <div class="grid-item-a">
+                        <h1>Festival 2022</h1>
+                        <p>Después de dos años de ausencia, vuelve la mejor música a nuestro pueblo. Los mejores grupos y bandas del panorama nacional
+                            actuarán en las fiestas locales, en un espectáculo único que no te puedes perder</p>
+                        <p>Ánimate y consigue ya tus entradas. Aforo limitado.</p>
+                    </div>
+                    <div class="grid-item-b">
+                        <p><img src="./assets/images/patrocinador.png"></p>                
+                    </div>
+                    <div class="grid-item-c">
+                        <p><img src="./assets/images/patrocinador2.png"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
+
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+
+
+   
+    
 </html>

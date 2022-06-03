@@ -7,7 +7,11 @@
  * Import variables
  */
 
+@tailwind base;
+@tailwind components;
+
 @import "variables";
+
 
 /**
  * Import npm dependencies
@@ -18,12 +22,30 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+ @import "layouts/index";
+ @import "layouts/bandas";
+ @import "layouts/galeria";
+ @import "layouts/nosotros";
+ @import "global";
+
+@tailwind utilities;
+
+.btn-primary {
+    @apply bg-purple hover:bg-navy font-semibold text-white px-3.5 py-3.5;
+}
+
+.form-control {
+    @apply appearance-none border py-3 px-3;
+}
+   
+   
 
 /**
  * Do NOT include anything else in this file!

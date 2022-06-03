@@ -1,0 +1,65 @@
+/******* BANDAS FLEXBOX ********/
+
+.card img{width:100%; border-radius: 5px;}
+.card{border: none !important;}
+.card p{font-size: 1em; text-align: justify;}
+.card h3{
+    font-size: 1.2em;
+    margin: 20px 0 5px 0; 
+    text-align:center;
+    color: $corporate-color;
+    font-weight: bold;
+}
+.card h4{
+    font-size: 1.1em;
+    margin: 0 0 20px 0; 
+    text-align:center;
+    color: $corporate-color2;
+}
+
+.flex-row-item-2 {
+    background-color: $bg-color;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.flex-row-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+    gap: 40px;
+    margin-top:15px;
+    margin-bottom: 40px;
+}
+.flex-row-container-2 > .flex-row-item-2 {
+    flex: 1 1 25%;      /*grow | shrink | basis */
+}
+
+
+
+@media screen and (max-width: 575px), screen and (orientation: portrait){
+
+    .flex-row-container-2 > .flex-row-item-2 {
+        flex: 1 1 100%;      
+    }
+
+    .flex-row-container-2 {
+        gap: 40px;
+        margin-top:15px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 767px), screen and (orientation: portrait){
+
+    .flex-row-container-2 > .flex-row-item-2 {
+        flex: 1 1 46%;      
+    }
+
+    .flex-row-container-2 {
+        gap: 40px;
+        margin-top:15px;
+        margin-bottom: 40px;
+    }
+}

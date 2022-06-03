@@ -1,0 +1,77 @@
+/*********** INDEX *************/
+
+#posterPage{
+  background-image: url("../../assets/images/fondoIndex.jpg");
+  background-size: cover;
+  min-height: 800px;
+  width: 100%;
+}
+
+.grid h1{
+  color: #fff;
+  margin: 10px 0 15px 0;
+  font-weight: bold;
+}
+
+.grid {
+  padding-top: 1.2rem;
+  display: grid;
+  grid-template-columns: auto auto 100px auto;
+
+  grid-template-rows: auto 150px 100px auto auto;
+
+  grid-template-areas:    'e a a f'
+                          'e a a f'
+                          'g g g g'
+                          'h h h h'
+                          'b d d c';
+}
+
+/*.grid > div{
+  text-align: center;
+  padding: 20px 25px 0px 25px;
+}*/
+
+.grid p{font-size: 1.1rem;}
+
+.grid-item-a{
+  grid-area: a;
+  background: rgb(48,54,103);
+  background: linear-gradient(45deg, $corporate-color2 0%, $corporate-color 52%, $corporate-color-hover 100%);
+  border-radius: 5px;
+  margin-top: 75px;
+  color: white;
+  padding-bottom: 15px !important;
+}
+
+.grid-item-b{
+  grid-area: b;
+  background-color: rgba(38, 38, 38, 0.75);
+  border-radius: 5px;
+}
+
+.grid-item-c{
+  grid-area: c;
+  background-color: rgba(38, 38, 38, 0.75);
+  border-radius: 5px;
+}
+
+.grid img{width: 100px;}
+
+@supports (display: grid) {
+  @media screen and (max-width: 767px), screen and (orientation: portrait) {
+    .grid {
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:    'a a a a'
+                              'a a a a'
+                              'g g g g'
+                              'h h h h'
+                              'b b c c';
+    }
+    .grid-item-a{margin-top: 30px; margin-bottom:90px;}
+    .grid-item-b, .grid-item-c{margin-bottom:0px;}
+  }
+}
+
+
+
